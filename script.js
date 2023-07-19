@@ -10,3 +10,9 @@ createBtn.addEventListener('click', () => {
     img.src = 'images/delete.png'
     notesContainer.appendChild(inputBox).appendChild(img)
 })
+
+notesContainer.addEventListener('click', (e) => {
+    if (e.target.nodeName === 'IMG') {
+        e.target.parentElement.remove()
+    }
+})
